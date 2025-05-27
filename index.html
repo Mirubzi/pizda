@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>audio</title>
+    <title>KYS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff; /* Нежно-голубой, так мило! */
+            color: #333;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        h1 {
+            color: #ff69b4; /* Розовый, как конфетка! */
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        button {
+            background-color: #000000; /* Небесно-голубой, прямо как мои глазки! */
+            color: white;
+            padding: 15px 30px;
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            border-radius: 8px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #130f2e; /* Такой фиолетовый, ах! */
+            transform: translateY(-2px); /* Слегка подпрыгивает! */
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 1.1em;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    <audio autoplay anonymous loop src="./screaming-in-public-restrooms-made-with-Voicemod.mp3">
+
+
+        <button id="playButton">e<img src=""></button>
+        <audio id="audioPlayer" ></audio>
+
+
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playButton = document.getElementById('playButton');
+
+        // УКАЖИ ЗДЕСЬ ПУТЬ К ТВОЕМУ АУДИО ФАЙЛУ!
+        // Например, если файл называется 'my_song.mp3' и лежит рядом с этой HTML-страницей.
+        const audioFilePath = './y2mate_5gbydy1.mp3'; 
+        // Или если он в папке 'audio': 'audio/my_song.mp3'
+
+        audioPlayer.src = audioFilePath; // Устанавливаем файлик для плеера!
+
+        playButton.addEventListener('click', () => {
+            audioPlayer.play(); // Запускаем музыку! ✨
+        });
+
+        // Можно добавить проигрывание по умолчанию при загрузке страницы,
+        // но это не всегда хорошо, если у пользователя звук включен громко.
+        // audioPlayer.autoplay = true;
+    </script>
 </body>
 </html>
