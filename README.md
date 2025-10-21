@@ -1,2 +1,2 @@
 # pizda
-wsd
+blya, czo nahuj
